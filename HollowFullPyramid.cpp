@@ -2,18 +2,23 @@
 using namespace std;
 int main()
 {
-    int row, col;
-    for (row = 0; row < 5; row++)
+    int num;
+    cin >> num;
+    for (int row = 0; row < num; row++)
     {
-        for (col = 0; col < 5; col++)
+        for (int col = 0; col < num - row - 1; col++)
         {
-            if (row == 0 || row == 4)
+            cout << " ";
+        }
+        for (int col = 0; col < row + 1; col++)
+        {
+            if (row == 0 || row == num - 1)
             {
                 cout << "* ";
             }
             else
             {
-                if (col == 0 || col == 4)
+                if (col == 0 || col == row)
                 {
                     cout << "* ";
                 }
@@ -25,5 +30,4 @@ int main()
         }
         cout << "\n";
     }
-    return 0;
 }
